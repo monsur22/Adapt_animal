@@ -22,7 +22,7 @@
                         <a href="javascript:;"><i class="sidebar-item-icon fa fa-paw"></i>
                             <span class="nav-label">Adapt</span><i class="fa fa-angle-left arrow"></i></a>
                         <ul class="nav-2-level collapse">
-                            <li><a class="" href="{{url('/')}}">My Adapt</a></li>
+                            <li><a class="" href="{{url('/Adapt-list')}}">My Adapt</a></li>
                            
                           
                         </ul>
@@ -31,7 +31,8 @@
                         <a href="javascript:;"><i class="sidebar-item-icon fa fa-bookmark"></i>
                             <span class="nav-label">Post Animal</span><i class="fa fa-angle-left arrow"></i></a>
                         <ul class="nav-2-level collapse">
-                            <li><a class="" href="{{url('/')}}">My Post</a></li>                          
+                            <li><a class="" href="{{url('/mypost')}}">My Post</a></li>                          
+                            <li><a class="" href="{{url('/request-my-post')}}">Request My Post</a></li>                          
 
                            
                           
@@ -41,13 +42,13 @@
                         <a href="javascript:;"><i class="sidebar-item-icon fa fa-bookmark"></i>
                             <span class="nav-label">Request</span><i class="fa fa-angle-left arrow"></i></a>
                         <ul class="nav-2-level collapse">
-                            <li><a class="" href="{{url('/')}}">My Request</a></li>                          
+                            <li><a class="" href="{{url('/my-request')}}">My Request</a></li>                          
 
                            
                           
                         </ul>
                     </li>
-                    <li>
+                    {{-- <li>
                         <a href="javascript:;"><i class="sidebar-item-icon fa fa-envelope"></i>
                             <span class="nav-label">Massage</span><i class="fa fa-angle-left arrow"></i></a>
                         <ul class="nav-2-level collapse">
@@ -56,7 +57,7 @@
                        
                           
                         </ul>
-                    </li>
+                    </li> --}}
                       
                      {{-- <li>
                         <a href="javascript:;"><i class="sidebar-item-icon fa fa-bookmark"></i>

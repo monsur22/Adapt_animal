@@ -27,117 +27,42 @@
                 </div>
             </div>						
             <div class="row justify-content-center">
-                <form class="col-lg-9">
+                <form class="col-lg-9"action="{{ url('/volunteer-add') }}" method="post" enctype="multipart/form-data">
+                    @csrf
                   <div class="form-group">
                     <label for="first-name">First Name</label>
-                    <input type="text" class="form-control" placeholder="First Name">
+                    <input type="text" class="form-control" placeholder="First Name"name="first_name">
                   </div>
                   <div class="form-group">
                     <label for="last-name">Last Name</label>
-                    <input type="text" class="form-control" placeholder="Last Name">
+                    <input type="text" class="form-control" placeholder="Last Name"name="last_name">
+                  </div>
+                  <div class="form-group">
+                    <label for="last-name">Photos</label>
+                    <input type="file" class="form-control"name="image" >
                   </div>						  
                   <div class="form-group">
                     <label for="Address">Address</label>
-                    <input type="text" class="form-control mb-20" placeholder="Your Address">
-                    <input type="text" class="form-control" placeholder="">
+                 
+                    <textarea class="form-control" id="" rows="3" placeholder="Your Address"name="address"></textarea>
+
                   </div>						  
                   <div class="form-row">
-                      <div class="col-6 mb-30">
-                          <label for="City">City</label>
-                           <div class="select-option" id="service-select"">
-                            <select>
-                                <option data-display="Select City">Select City</option>
-                                <option value="1">Dhaka</option>
-                                <option value="2">Dinajpur</option>
-                                <option value="3">Gazipur</option>
-                                <option value="4">Bogra</option>
-                                <option value="5">Feni</option>
-                            </select>
-                        </div>	
-                      </div>
-                      <div class="col-6 mb-30">
-                          <label for="state">State</label>
-                           <div class="select-option" id="service-select"">
-                            <select>
-                                <option data-display="Select State">Select State</option>
-                                <option value="1">State One</option>
-                                <option value="2">State Two</option>
-                                <option value="3">State Three</option>
-                                <option value="4">State Four</option>
-                                <option value="5">State Five</option>
-                            </select>
-                        </div>						  		
-                      </div>						  	
-                      <div class="col-6 mb-30">
-                          <label for="Country">Country</label>
-                           <div class="select-option" id="service-select"">
-                            <select>
-                                <option data-display="Select Country">Select Country</option>
-                                <option value="1">Bangladesh</option>
-                                <option value="2">London</option>
-                                <option value="3">India</option>
-                                <option value="4">Nepal</option>
-                                <option value="5">Uganda</option>
-                            </select>
-                        </div>	
-                      </div>
-                      <div class="col-6 mb-30">
-                          <label for="postal-code">Postal code</label>
-                           <input type="text" class="form-control" placeholder="Postal Code">						  		
-                      </div>						  	
+                     					  	
                       <div class="col-6 mb-30">
                           <label for="email">Email Address</label>
-                           <input type="email" class="form-control" placeholder="Email Address">
+                           <input type="email" class="form-control" placeholder="Email Address"name="email">
                       </div>
                       <div class="col-6 mb-30">
                           <label for="phone">Phone Number</label>
-                           <input type="phone" class="form-control" placeholder="Phone Number">						  		
+                           <input type="number" class="form-control" placeholder="Phone Number"name="phone">						  		
                       </div>
                   </div>		
 
-                  <fieldset class="form-group">
-                    <label for="day">Which days you can be volunteer?</label>
-                    <div class="form-group ">
-                        <div class="form-check form-check-inline">
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" name="inlinecheckbox" id="inlineRadio1" value="option1"> Monday
-                            </label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" name="inlinecheckbox" id="inlineRadio2" value="option2"> Tuesday
-                            </label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" name="inlinecheckbox" id="inlineRadio3" value="option3"> Wednesday
-                            </label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" name="inlinecheckbox" id="inlineRadio2" value="option4"> Thursday
-                            </label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" name="inlinecheckbox" id="inlineRadio2" value="option5"> Friday
-                            </label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" name="inlinecheckbox" id="inlineRadio2" value="option6"> Saturday
-                            </label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" name="inlinecheckbox" id="inlineRadio2" value="option6"> Sunday
-                            </label>
-                        </div>                                
-                    </div>
-                  </fieldset>
+            
                   <div class="form-group">
                     <label for="note">Volunteer Note</label>
-                    <textarea class="form-control" id="exampleTextarea" rows="5" placeholder="Write message"></textarea>
+                    <textarea class="form-control" id="exampleTextarea" rows="5" placeholder="Write message"name="message"></textarea>
                   </div>						  
                   <button type="submit" class="primary-btn float-right">Send Request</button>
                 </form>

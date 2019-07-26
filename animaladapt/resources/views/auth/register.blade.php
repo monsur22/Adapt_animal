@@ -22,8 +22,11 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
+                              
+
                             </div>
                         </div>
+                      
 
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
@@ -38,7 +41,20 @@
                                 @enderror
                             </div>
                         </div>
-
+                        <div class="form-group row">
+                                <label for="user_role" class="col-md-4 col-form-label text-md-right">{{ __('User Role') }}</label>
+    
+                                <div class="col-md-6">
+                                    <input id="user_role" type="user_role" class="form-control @error('user_role') is-invalid @enderror" name="user_role" value="user" required autocomplete="user_role" readonly>
+    
+                                    @error('user_role')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                      
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 

@@ -25,6 +25,37 @@
     <div class="container">
         <div class="row">
             <div class="active-image-carusel">
+                @foreach ($home_content as $item)
+                <div class="single-image-carusel">
+                        <a href="{{url('animal-details-by-id/'.$item->id)}}">
+                        <img class="img-fluid" src="{{asset($item->image)}}" alt=""style="height: 320px;width:285px">
+                        </a>
+                    </div>
+                @endforeach
+                 {{-- <div class="single-image-carusel">
+                    <img class="img-fluid" src="{{asset('public/home')}}/img/c1.jpg" alt="">
+                </div>
+                 <div class="single-image-carusel">
+                    <img class="img-fluid" src="{{asset('public/home')}}/img/c2.jpg" alt="">
+                </div>
+                <div class="single-image-carusel">
+                    <img class="img-fluid" src="{{asset('public/home')}}/img/c3.jpg" alt="">
+                </div>
+                <div class="single-image-carusel">
+                    <img class="img-fluid" src="{{asset('public/home')}}/img/c4.jpg" alt="">
+                </div>	 
+               <div class="single-image-carusel">
+                    <img class="img-fluid" src="{{asset('public/home')}}/img/c1.jpg" alt="">
+                </div>
+                <div class="single-image-carusel">
+                    <img class="img-fluid" src="{{asset('public/home')}}/img/c2.jpg" alt="">
+                </div>
+                <div class="single-image-carusel">
+                    <img class="img-fluid" src="{{asset('public/home')}}/img/c3.jpg" alt="">
+                </div>
+                <div class="single-image-carusel">
+                    <img class="img-fluid" src="{{asset('public/home')}}/img/c4.jpg" alt="">
+                </div>
                 <div class="single-image-carusel">
                     <img class="img-fluid" src="{{asset('public/home')}}/img/c1.jpg" alt="">
                 </div>
@@ -36,31 +67,7 @@
                 </div>
                 <div class="single-image-carusel">
                     <img class="img-fluid" src="{{asset('public/home')}}/img/c4.jpg" alt="">
-                </div>	
-                <div class="single-image-carusel">
-                    <img class="img-fluid" src="{{asset('public/home')}}/img/c1.jpg" alt="">
-                </div>
-                <div class="single-image-carusel">
-                    <img class="img-fluid" src="{{asset('public/home')}}/img/c2.jpg" alt="">
-                </div>
-                <div class="single-image-carusel">
-                    <img class="img-fluid" src="{{asset('public/home')}}/img/c3.jpg" alt="">
-                </div>
-                <div class="single-image-carusel">
-                    <img class="img-fluid" src="{{asset('public/home')}}/img/c4.jpg" alt="">
-                </div>
-                <div class="single-image-carusel">
-                    <img class="img-fluid" src="{{asset('public/home')}}/img/c1.jpg" alt="">
-                </div>
-                <div class="single-image-carusel">
-                    <img class="img-fluid" src="{{asset('public/home')}}/img/c2.jpg" alt="">
-                </div>
-                <div class="single-image-carusel">
-                    <img class="img-fluid" src="{{asset('public/home')}}/img/c3.jpg" alt="">
-                </div>
-                <div class="single-image-carusel">
-                    <img class="img-fluid" src="{{asset('public/home')}}/img/c4.jpg" alt="">
-                </div>															
+                </div>															 --}}
             </div>
         </div>
     </div>	

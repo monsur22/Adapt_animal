@@ -26,8 +26,8 @@
                             <span class="lnr lnr-home"></span>
                         </div>
                         <div class="contact-details">
-                            <h5>Binghamton, New York</h5>
-                            <p>4343 Hinkle Deegan Lake Road</p>
+                            <h5>Dhaka</h5>
+                            <p>Bangladesh</p>
                         </div>
                     </div>
                     <div class="single-contact-address d-flex flex-row">
@@ -35,7 +35,7 @@
                             <span class="lnr lnr-phone-handset"></span>
                         </div>
                         <div class="contact-details">
-                            <h5>00 (953) 9865 562</h5>
+                            <h5>123456789</h5>
                             <p>Mon to Fri 9am to 6 pm</p>
                         </div>
                     </div>
@@ -44,30 +44,49 @@
                             <span class="lnr lnr-envelope"></span>
                         </div>
                         <div class="contact-details">
-                            <h5>support@colorlib.com</h5>
+                            <h5>support@gmail.com</h5>
                             <p>Send us your query anytime!</p>
                         </div>
                     </div>														
                 </div>
                 <div class="col-lg-8">
-                    <form class="form-area " id="myForm" action="mail.php" method="post" class="contact-form text-right">
+                        {{-- <form class="form-area " id="myForm" action="{{url('/contact/front')}}" method="post" class="contact-form text-right">
+                            {{ csrf_field() }}
                         <div class="row">	
+                          
                             <div class="col-lg-6 form-group">
-                                <input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mb-20 form-control" required="" type="text">
+                                <input name="name" placeholder="Enter your name"  required="" >
                             
-                                <input name="email" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common-input mb-20 form-control" required="" type="email">
+                                <input name="email" placeholder="Enter email address" required="" >
 
-                                <input name="subject" placeholder="Enter your subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your subject'" class="common-input mb-20 form-control" required="" type="text">
+                                <input name="subject" placeholder="Enter your subject"  required="" >
                             </div>
                             <div class="col-lg-6 form-group">
                                 <textarea class="common-textarea form-control" name="message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'" required=""></textarea>						
                             </div>
-                            <div class="col-lg-12 d-flex justify-content-between">
-                                <div class="alert-msg" style="text-align: left;"></div>
-                                <button class="genric-btn primary circle" style="float: right;">Send Message</button>		
-                            </div>
+                           
+                            
+                                <input class="primary-btn float-right" type="submit" name="submit" value="Send">	
+                           
                         </div>
-                    </form>	
+                    </form>	 --}}
+                    <form action="{{url('/contact/front')}}"method="post">
+                        @csrf
+                        <fieldset class="form-group">
+                                <input type="text" class="form-control" id="name"name="name" placeholder="Enter Name">
+                            </fieldset>
+                            <fieldset class="form-group">
+                                <input type="email" class="form-control" id="email"name="email" placeholder="Enter email">
+                            </fieldset>
+                            <fieldset class="form-group">
+                                    <input type="text" class="form-control" id="subject"name="subject" placeholder="Enter Subject">
+                                </fieldset>
+                            <fieldset class="form-group">
+                                <textarea class="form-control" id="message" name="message"placeholder="Message"></textarea>
+                            </fieldset>
+                                <button type="submit" class="btn btn-secondary-outline btn-lg">Send</button>
+                           
+                    </form>
                 </div>
             </div>
         </div>	
